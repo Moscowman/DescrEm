@@ -1,4 +1,4 @@
-package ProcDescription
+package ProcessorDescription
 
 interface IProcessorDescription {
 }

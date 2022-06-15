@@ -1,4 +1,4 @@
-package ProcDescription.Registers
+package ProcessorDescription.Registers
 
 abstract class RegisterDefinitionBase {
     abstract val name: String
