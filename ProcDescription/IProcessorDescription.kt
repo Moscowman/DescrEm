@@ -1,0 +1,4 @@
+package ProcDescription
+
+interface IProcessorDescription {
+}
