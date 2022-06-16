@@ -22,7 +22,7 @@ class Z80 : IProcessorDescription {
     )
     val r16backtick: Array<Register16bits> = arrayOf(
             Register16bits("AF", 64), Register16bits("BC", 80),
-            Register16bits("DE", 96), Register16bits("HL", 12)
+            Register16bits("DE", 96), Register16bits("HL", 112)
     )
 }
 
