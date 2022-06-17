@@ -31,6 +31,13 @@ class Z80 : IProcessorDescription {
         RegistersSet(Register16bits("BC", 80), 0b10),
         RegistersSet(Register16bits("DE", 96), 0b10),
         RegistersSet(Register16bits("HL", 112), 0b10),
-    )
+        RegistersSet(Register16bits("PC", 128), 0b11),
+        RegistersSet(Register16bits("SP", 144), 0b11),
+        RegistersSet(Register16bits("IX", 160), 0b11),
+        RegistersSet(Register16bits("IY", 176), 0b11),
+        RegistersSet(Register8bits("R", 192), 0b11),
+        )
+
+
 }
 
