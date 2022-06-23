@@ -1,5 +1,6 @@
 package ProcessorDescription
 
+import ProcessorDescription.Commands.CommandDefinitionBase
 import ProcessorDescription.Registers.Register16bits
 import ProcessorDescription.Registers.Register8bits
 import ProcessorDescription.Registers.RegistersSet
@@ -38,6 +39,11 @@ class Z80 : IProcessorDescription {
         RegistersSet(Register8bits("R", 192), 0b11),
         )
 
-
+    val commands: Array<CommandDefinitionBase> = arrayOf(
+        CommandDefinitionBase("NOP", "NOP;", 0x0, 1),
+        CommandDefinitionBase("EX", "SWAP_REGISTERS_16_BIT AF/{01}, AF/{10};", 0x8, 1),
+        CommandDefinitionBase("DJNZ", "DEC B; IF B!= 0 THEN PC = PC + op1;", 0x10, 1, 1),
+        CommandDefinitionBase("JR", "NOP;", 0x18, 1, 1),
+    )
 }
 
